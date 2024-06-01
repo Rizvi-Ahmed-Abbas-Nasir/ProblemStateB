@@ -15,9 +15,9 @@ export default function Home() {
     const handleSubmit = async (e) => {
    
     e.preventDefault();
-    if (typeof document !== 'undefined') {
+    // if (typeof document !== 'undefined') {
 
-    const response =  fetch('/api/createSecret', {
+    const response =  await fetch('/api/createSecret', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -25,12 +25,12 @@ export default function Home() {
       body: JSON.stringify({ secret }),
     });
     if (response.ok) {
-      const data =  response.json();
+      const data = await response.json();
       setLink(data.link);
     } else {
       console.error('Failed to create secret');
     }
-  }
+  
 
   };
 
