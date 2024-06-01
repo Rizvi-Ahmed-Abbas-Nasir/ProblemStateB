@@ -1,6 +1,6 @@
 
 import { Roboto } from 'next/font/google'
-import img from './IMG/Capture.png';
+// import img from './IMG/Capture.png';
 import Image from "next/image";
 
 const roboto = Roboto({ 
@@ -21,13 +21,13 @@ export default function OneTime() {
                     
                
             </div>
-            <div className='ThreeDiv'>
+            {/* <div className='ThreeDiv'>
             <Image
             src={img}
             width={700}
             height={360}
             />
-            </div>  
+            </div>   */}
             </div>
            
            
